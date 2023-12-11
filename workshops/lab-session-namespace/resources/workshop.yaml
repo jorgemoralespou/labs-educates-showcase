@@ -7,13 +7,14 @@ spec:
   description: "Overview of Kubernetes application deployment."
   duration: 30m
   publish:
-    image: $(image_repository)/labs-educates-showcase/labs-educates-showcase-files:$(workshop_version)
+    image: $(image_repository)/labs-educates-showcase/lab-session-namespace-files:$(workshop_version)
   workshop:
     files:
       - image:
-          url: "$(image_repository)/labs-educates-showcase/labs-educates-showcase-files:$(workshop_version)"
+          url: "$(image_repository)/labs-educates-showcase/lab-session-namespace-files:$(workshop_version)"
         includePaths:
           - /exercises/**
+          - /resources/**
           - /workshop/**
   session:
     namespaces:
