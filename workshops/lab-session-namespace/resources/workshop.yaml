@@ -1,0 +1,31 @@
+apiVersion: training.educates.dev/v1beta1
+kind: Workshop
+metadata:
+  name: "lab-session-namespace"
+spec:
+  title: "Session Namespace"
+  description: "Overview of Kubernetes application deployment."
+  duration: 30m
+  publish:
+    image: $(image_repository)/labs-educates-showcase/labs-educates-showcase-files:$(workshop_version)
+  workshop:
+    files:
+      - image:
+          url: "$(image_repository)/labs-educates-showcase/labs-educates-showcase-files:$(workshop_version)"
+        includePaths:
+          - /exercises/**
+          - /workshop/**
+  session:
+    namespaces:
+      role: admin
+      budget: medium
+      security:
+        policy: restricted
+    applications:
+      terminal:
+        enabled: true
+        layout: split
+      console:
+        enabled: true
+      files:
+        enabled: true

@@ -1,0 +1,10 @@
+name: "Workshop Session"
+
+modules:
+  activate:
+  - 00-workshop-overview
+  - 01-workshop-instructions
+  - 02-clickable-actions
+  - 03-terminal-environment
+  - 04-session-lifecycle
+  - 99-workshop-summary

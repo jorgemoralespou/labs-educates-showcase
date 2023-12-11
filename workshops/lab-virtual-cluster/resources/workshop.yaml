@@ -1,0 +1,66 @@
+apiVersion: training.educates.dev/v1beta1
+kind: Workshop
+metadata:
+  name: "lab-virtual-cluster"
+spec:
+  title: "Virtual Cluster"
+  description: "Overview of optional virtual Kubernetes cluster."
+  duration: 30m
+  publish:
+    image: $(image_repository)/labs-educates-showcase/lab-virtual-cluster-files:$(workshop_version)
+  workshop:
+    files:
+      - image:
+          url: "$(image_repository)/labs-educates-showcase/lab-virtual-cluster-files:$(workshop_version)"
+        includePaths:
+          - /exercises/**
+          - /resources/**
+          - /workshop/**
+  session:
+    namespaces:
+      budget: large
+    applications:
+      terminal:
+        enabled: true
+        layout: split
+      console:
+        enabled: true
+      vcluster:
+        enabled: true
+        objects:
+          - apiVersion: v1
+            kind: Secret
+            metadata:
+              name: ssh-keys
+              namespace: default
+            stringData:
+              id_rsa.pub: $(ssh_public_key)
+      files:
+        enabled: true
+    objects:
+      - apiVersion: kappctrl.k14s.io/v1alpha1
+        kind: App
+        metadata:
+          name: kapp-controller.community.tanzu.vmware.com.0.44.6
+          namespace: $(session_namespace)-vc
+        spec:
+          noopDelete: true
+          syncPeriod: 24h
+          cluster:
+            namespace: default
+            kubeconfigSecretRef:
+              name: $(vcluster_secret)
+              key: config
+          fetch:
+            - imgpkgBundle:
+                image: projects.registry.vmware.com/tce/kapp-controller@sha256:f31387371956ebd2e9b74f91a5f9af5617d002afcacdda089875705bb0eb743f
+          template:
+            - ytt:
+                paths:
+                  - config/
+            - kbld:
+                paths:
+                  - "-"
+                  - .imgpkg/images.yml
+          deploy:
+            - kapp: {}

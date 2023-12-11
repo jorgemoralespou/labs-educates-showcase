@@ -1,0 +1,21 @@
+modules:
+  00-workshop-overview:
+    name: Workshop Overview
+    exit_sign: Start Workshop
+  01-session-namespace:
+    name: Session Namespace
+  02-deploy-a-workload:
+    name: Deploy a Workload
+  03-cluster-ingress:
+    name: Cluster Ingress
+  04-kubernetes-console:
+    name: Kubernetes Console
+  05-role-based-access:
+    name: Role Based Access
+  06-policy-enforcement:
+    name: Policy Enforcement
+  07-resource-quotas:
+    name: Resource Quotas
+  99-workshop-summary:
+    name: Workshop Summary
+    exit_sign: Finish Workshop

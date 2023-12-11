@@ -1,0 +1,27 @@
+apiVersion: training.educates.dev/v1beta1
+kind: Workshop
+metadata:
+  name: "lab-java-environment"
+spec:
+  title: "Java Environment"
+  description: "Overview of working on Java applications."
+  duration: 30m
+  publish:
+    image: $(image_repository)/labs-educates-showcase/lab-java-environment-files:$(workshop_version)
+  workshop:
+    image: jdk17-environment:*
+    files:
+      - image:
+          url: "$(image_repository)/labs-educates-showcase/lab-java-environment-files:$(workshop_version)"
+        includePaths:
+          - /resources/**
+          - /workshop/**
+  session:
+    namespaces:
+      budget: medium
+    applications:
+      terminal:
+        enabled: true
+        layout: split
+      editor:
+        enabled: true
