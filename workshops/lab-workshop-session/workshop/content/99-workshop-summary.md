@@ -13,7 +13,7 @@ The source code repository for this series of workshops showcasing the Educates
 training platform can be found at:
 
 ```dashboard:open-url
-url: https://github.com/vmware-tanzu-labs/labs-educates-showcase
+url: https://github.com/educates/labs-educates-showcase
 ```
 
 Documentation for Educates can be found at:
