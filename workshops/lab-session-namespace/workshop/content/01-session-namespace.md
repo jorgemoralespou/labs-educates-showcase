@@ -6,7 +6,7 @@ When a workshop has access to the Kubernetes cluster enabled, a workshop session
 is provided access to a single Kubernetes namespace created in the cluster for
 deploying workloads.
 
-For this workshop session the name of that namespace is `{{session_namespace}}`.
+For this workshop session the name of that namespace is `{{< param session_namespace >}}`.
 
 Run the command:
 
@@ -18,7 +18,7 @@ and the output should be:
 
 ```
 CURRENT   NAME       CLUSTER    AUTHINFO   NAMESPACE
-*         educates   educates   educates   {{session_namespace}}
+*         educates   educates   educates   {{< param session_namespace >}}
 ```
 
 This indicates that the namespace will be configured as part of the default
