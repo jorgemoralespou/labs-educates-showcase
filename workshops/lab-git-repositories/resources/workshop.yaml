@@ -24,3 +24,5 @@ spec:
         layout: split
       git:
         enabled: true
+      files:
+        enabled: true

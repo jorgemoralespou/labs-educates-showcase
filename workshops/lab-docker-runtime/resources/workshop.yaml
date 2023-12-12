@@ -24,6 +24,8 @@ spec:
         layout: split
       console:
         enabled: true
+      files:
+        enabled: true
       docker:
         enabled: true
       registry:

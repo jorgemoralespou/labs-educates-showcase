@@ -32,3 +32,5 @@ spec:
         enabled: false
       vcluster:
         enabled: false
+      files:
+        enabled: true

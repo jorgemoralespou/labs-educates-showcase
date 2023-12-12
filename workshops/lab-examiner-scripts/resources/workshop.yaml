@@ -17,10 +17,14 @@ spec:
           - /workshop/**
   session:
     namespaces:
+      security:
+        policy: baseline
       budget: medium
     applications:
       terminal:
         enabled: true
         layout: split
+      files:
+        enabled: true
       examiner:
         enabled: true

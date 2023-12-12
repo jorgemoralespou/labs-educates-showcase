@@ -25,5 +25,7 @@ spec:
       terminal:
         enabled: true
         layout: split
+      files:
+        enabled: true
       editor:
         enabled: true

@@ -26,3 +26,5 @@ spec:
         enabled: true
         reveal.js:
           version: 3.X
+      files:
+        enabled: true
