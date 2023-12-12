@@ -20,19 +20,19 @@ spec:
         deadline: 60m
         orphaned: 5m
   workshops:
-  - name: lab-workshop-session
-  - name: lab-session-namespace  
-  - name: lab-virtual-cluster
-  #- name: lab-virtual-machines
-  - name: lab-integrated-editor
-  - name: lab-slide-presentations
-  - name: lab-docker-runtime
-  - name: lab-examiner-scripts
-  - name: lab-java-environment
-  - name: lab-conda-environment
-  - name: lab-shared-resources
-  - name: lab-session-resources
-  - name: lab-extension-packages
-  - name: lab-managed-services
-  - name: lab-ingress-proxy
-  - name: lab-git-repositories
+    - name: lab-workshop-session
+    - name: lab-session-namespace
+    - name: lab-virtual-cluster
+    #- name: lab-virtual-machines
+    - name: lab-integrated-editor
+    - name: lab-slide-presentations
+    - name: lab-docker-runtime
+    - name: lab-examiner-scripts
+    - name: lab-java-environment
+    - name: lab-conda-environment
+    - name: lab-shared-resources
+    - name: lab-session-resources
+    - name: lab-extension-packages
+    - name: lab-managed-services
+    - name: lab-ingress-proxy
+    - name: lab-git-repositories

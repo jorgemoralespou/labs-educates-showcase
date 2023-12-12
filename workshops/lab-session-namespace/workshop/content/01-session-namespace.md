@@ -1,3 +1,7 @@
++++
+title = 'Session Namespace'
++++
+
 When a workshop has access to the Kubernetes cluster enabled, a workshop session
 is provided access to a single Kubernetes namespace created in the cluster for
 deploying workloads.

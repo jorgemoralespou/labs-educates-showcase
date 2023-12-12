@@ -1,3 +1,7 @@
++++
+title = 'Deploy a Workload'
++++
+
 To verify access to the session namespace and ensure we can deploy a workload,
 lets deploy a simple blog application.
 
@@ -5,18 +9,18 @@ First create a watch command so we can monitor the resources as they are
 created.
 
 ```terminal:execute
-command: watch kubectl get deployments,replicasets,pods,services,ingress 
+command: watch kubectl get deployments,replicasets,pods,services,ingress
 session: 1
 ```
 
-Now deploy the application. 
+Now deploy the application.
 
 ```terminal:execute
 command: |-
     ytt -f frontend \
-        -v SESSION_NAMESPACE={{session_namespace}} \
-        -v INGRESS_DOMAIN={{ingress_domain}} \
-        -v POLICY_ENGINE={{policy_engine}} | \
+        -v SESSION_NAMESPACE={{< param session_namespace >}} \
+        -v INGRESS_DOMAIN={{< param ingress_domain >}} \
+        -v POLICY_ENGINE={{< param policy_engine >}} | \
     kapp deploy -a frontend -f - -y
 session: 2
 ```

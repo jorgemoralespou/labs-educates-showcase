@@ -1,3 +1,7 @@
++++
+title = 'Kubernetes Console'
++++
+
 To provide a visual way of viewing workloads deployed to the Kubernetes cluster
 an embeded Kubernetes console can be enabled.
 
@@ -16,7 +20,7 @@ prefix: Console
 title: View deployment for "blog"
 description: ""
 name: Console
-url: {{ingress_protocol}}://console-{{session_namespace}}.{{ingress_domain}}/#/deployment/{{session_namespace}}/blog?namespace={{session_namespace}}
+url: {{< param ingress_protocol >}}://console-{{< param session_namespace >}}.{{< param ingress_domain >}}/#/deployment/{{< param session_namespace >}}/blog?namespace={{< param session_namespace >}}
 ```
 
 For command line warriors, `k9s` can be used from the command line:

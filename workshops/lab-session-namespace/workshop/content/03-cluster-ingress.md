@@ -1,7 +1,11 @@
++++
+title = 'Cluster Ingress'
++++
+
 With the deployment completed, test access to the application by running:
 
 ```terminal:execute
-command: curl http://blog-{{session_namespace}}.{{ingress_domain}}/
+command: curl http://blog-{{< param session_namespace >}}.{{< param session_name >}}/
 ```
 
 If this fails, keep running it as depending on the cluster and infrastructure
@@ -19,5 +23,5 @@ To display that the application is working we could also open the URL in the
 browser:
 
 ```dashboard:open-url
-url: http://blog-{{session_namespace}}.{{ingress_domain}}/
+url: http://blog-{{< param session_namespace >}}.{{< param ingress_domain >}}/
 ```

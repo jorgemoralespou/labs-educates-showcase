@@ -1,3 +1,7 @@
++++
+title = 'Policy Enforcement'
++++
+
 In a plain Kubernetes cluster any type of container image can be run. This means
 a user with access to the cluster can run applications as the `root` user, or
 run a container in privileged mode, meaning that it is possible to access host
