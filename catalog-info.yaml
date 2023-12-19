@@ -13,6 +13,10 @@ metadata:
 spec:
   owner: educates
   system: educates-workshops
+  includedWorkshops:
+    - lab-session-namespace
+    - lab-workshop-session
+    - lab-docker-runtime
 ---
 apiVersion: educates.dev/v1alpha1
 kind: Workshop
