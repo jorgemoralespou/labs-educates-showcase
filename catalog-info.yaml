@@ -32,6 +32,20 @@ spec:
   owner: educates
   system: educates-workshops
 ---
+apiVersion: educates.dev/v1alpha1
+kind: Workshop
+metadata:
+  labels:
+    'backstage.io/kubernetes-id': lab-docker-runtime
+  annotations:
+    'backstage.io/kubernetes-id': lab-docker-runtime
+  name: lab-docker-runtime
+spec:
+  type: workshop
+  lifecycle: experimental
+  owner: educates
+  system: educates-workshops
+---
 # - name: lab-virtual-cluster
 # # - name: lab-virtual-machines
 # #    - name: lab-integrated-editor
@@ -42,7 +56,6 @@ spec:
 #   overtime: 5m
 #   deadline: 10m
 #   orphaned: 1m
-# - name: lab-docker-runtime
 # - name: lab-examiner-scripts
 # - name: lab-java-environment
 # - name: lab-conda-environment
