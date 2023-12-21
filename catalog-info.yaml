@@ -76,4 +76,16 @@ spec:
 # - name: lab-managed-services
 # - name: lab-ingress-proxy
 # - name: lab-git-repositories
-
+---
+apiVersion: educates.dev/v1alpha1
+kind: TrainingPortal
+metadata:
+  annotations:
+    backstage.io/kubernetes-id: backstage-educates-plugin
+    github.com/project-slug: 'jorgemoralespou/labs-educates-showcase'
+  name: backstage-educates-plugin
+spec:
+  owner: educates
+  system: educates-workshops
+  includedWorkshops: []
+¡
